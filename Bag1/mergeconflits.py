@@ -8,3 +8,6 @@ class gitchecjk():
 
     def tridmethod(self):
         print("thirdmethod")
+
+    def forthmethod(self):
+        print("fourthmethod")

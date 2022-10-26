@@ -11,3 +11,6 @@ class gitchecjk():
 
     def forthmethod(self):
         print("fourthmethod")
+
+    def fifthmethod(self):
+        print("fifthmethod")

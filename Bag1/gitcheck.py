@@ -5,3 +5,6 @@ class gitchecjk():
 
     def secondtestcase(self):
         print("secondtestcase")
+
+    def tridmethod(self):
+        print("thirdmethod")

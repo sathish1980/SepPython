@@ -17,3 +17,6 @@ class gitchecjk():
 
     def fifthmethod(self):
         print("fifthmethod")
+
+    def sixthmethod(self):
+        print("sixthmethod")

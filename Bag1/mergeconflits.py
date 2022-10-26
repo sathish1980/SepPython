@@ -11,3 +11,6 @@ class gitchecjk():
 
     def mergeconflicts(self):
         print("mergeconflict")
+
+    def forthmethod(self):
+        print("fourthmethod")

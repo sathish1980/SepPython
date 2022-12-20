@@ -2,7 +2,7 @@ import time
 
 import pyautogui
 from selenium import webdriver
-from selenium.webdriver import ActionChains
+from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -25,7 +25,7 @@ class mouseactions():
         WebDriverWait(self.driver, 60).until(
             EC.presence_of_element_located((By.XPATH, "//*[@id='gh-ac-box2']//input[@id='gh-ac']")))
         self.driver.find_element(by=By.XPATH,value="//*[@id='gh-ac-box2']//input[@id='gh-ac']").send_keys("shoes")
-        mouseactions.move_to_element(self.driver.find_element(by=By.XPATH,value="//*[@id='gh-ac-box2']//input[@id='gh-ac']")).send_keys("shoes").double_click().context_click().perform()
+        mouseactions.move_to_element(self.driver.find_element(by=By.XPATH,value="//*[@id='gh-ac-box2']//input[@id='gh-ac']")).double_click().context_click().perform()
 
     def facebook(self):
         self.driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()))
@@ -34,7 +34,7 @@ class mouseactions():
         mouseactions = ActionChains(self.driver)
         mouseactions.move_to_element(
             self.driver.find_element(by=By.ID, value="email")).send_keys(
-            "sathish").double_click().context_click().perform()
+            "sathish").key_down(Keys.TAB).key_up(Keys.TAB).perform()
 
     def draganddrop(self):
         self.driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()))
@@ -77,4 +77,4 @@ class mouseactions():
 
 
 obj=mouseactions()
-obj.facebookkeyboardwithinapp()
+obj.facebookkeyboard()

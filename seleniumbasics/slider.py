@@ -23,9 +23,9 @@ class slider:
         mc = ActionChains(self.driver)
         time.sleep(2)
         #fromvalue = self.driver.find_element(by=By.XPATH, value="//*[contains(@id,'form:j_idt125')]//div[1]")
-        fromvalue = self.driver.find_element(by=By.XPATH, value="//*[contains(@id,'form:j_idt125')]//span[1]")
+        fromvalue = self.driver.find_element(by=By.XPATH, value="//*[contains(@id,'form:j_idt125')]//span[2]")
         mc.move_to_element(self.driver.find_element(by=By.XPATH,
-                                                    value="//*[contains(@id,'form:j_idt125')]//span[1]")).drag_and_drop_by_offset(
+                                                    value="//*[contains(@id,'form:j_idt125')]//span[2]")).drag_and_drop_by_offset(
             fromvalue,-85, 0).perform()
 obj = slider()
 obj.sliderimplementation()

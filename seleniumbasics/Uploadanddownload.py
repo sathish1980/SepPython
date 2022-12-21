@@ -40,13 +40,13 @@ class uploadanddownload():
 
     def downloadinspecificdirectoty(self):
         options = webdriver.ChromeOptions()
-        prefs = {
+        browser = {
             "download.default_directory": "C:\\Users\\sathishkumar\\PycharmProjects\\SepPythonBasiconline\\Downloadfile\\"}
-        options.add_experimental_option("prefs", prefs)
+        options.add_experimental_option("prefs", browser)
         options.add_argument("--start-maximized")
         #driver = webdriver.Chrome('D:\Software\chromedriver_win32\chromedriver.exe', options=options)
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-        self.driver.maximize_window()
+        #self.driver.maximize_window()
         self.driver.get("https://www.leafground.com/grid.xhtml")
         self.driver.find_element(by=By.ID, value="form:j_idt93").click()
         time.sleep(5)

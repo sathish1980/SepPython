@@ -34,7 +34,7 @@ class tableconcept():
             basepath="//*[@id='form:j_idt89']//tbody//tr"
             Totalrows=self.driver.find_elements(by=By.XPATH,value=basepath)
             for eachrow in range(1,len(Totalrows)+1):
-                self.driver.find_elements(by=By.XPATH, value=basepath+"["+str(eachrow)+"]")
+                #self.driver.find_elements(by=By.XPATH, value=basepath+"["+str(eachrow)+"]")
                 status=self.driver.find_element(by=By.XPATH,value=basepath+"["+str(eachrow)+"]//td[5]//span[contains(@class,'customer-badge')]").text
                 if(status==actualstatus):
                     country=self.driver.find_element(by=By.XPATH,value=basepath+"["+str(eachrow)+"]//td[2]//span[3]").text
@@ -42,5 +42,5 @@ class tableconcept():
                     print(country , name)
 
 obj=tableconcept()
-obj.tableimplementation("NEGOTIATION")
+obj.tableimplementation("QUALIFIED")
 
